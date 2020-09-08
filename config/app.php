@@ -2,6 +2,13 @@
 
 return [
 
+    /**
+     * Admin email and password
+     */
+
+    'adminEmail' => env('ADMIN_EMAIL'),
+    'adminPassword' => env('ADMIN_PASSWORD'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

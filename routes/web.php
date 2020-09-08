@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route:: get('/', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+});
