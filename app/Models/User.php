@@ -89,4 +89,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Like');
     }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = \Hash::make($value);
+    }
 }
