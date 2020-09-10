@@ -21,7 +21,6 @@ class Post extends Model
         'image',
         'is_published',
         'published_at',
-        'timestamp',
     ];
 
     public function users()

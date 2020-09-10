@@ -17,7 +17,7 @@ class CreateMessagesTable extends Migration
             $table->id()->autoIncrement();
             $table->unsignedBigInteger('post_id');
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->unsignedBigInteger('parent_id')->nullable()->index();
+            $table->integer('parent_id')->nullable()->index();
             $table->text('content');
             $table->timestamps();
 

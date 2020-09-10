@@ -17,7 +17,6 @@ class Message extends Model
         'user_id',
         'parent_id',
         'content',
-        'timestamp',
     ];
 
     public function users()
