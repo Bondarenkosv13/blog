@@ -17,7 +17,9 @@ Route:: get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', 'PostController@index')->name('dashboard');
 
+
+Route::middleware(['auth'])->prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
+    Route:: get('/', 'HomeController@index')->name('home');
+    Route::resource('/post', 'PostController')->except('index','show');
 });

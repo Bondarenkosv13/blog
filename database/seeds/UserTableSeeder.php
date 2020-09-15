@@ -16,7 +16,7 @@ class UserTableSeeder extends Seeder
             'surname' => 'admin',
             'email' => config('app.adminEmail'),
             'email_verified_at' => now(),
-            'password' => Hash::make(config('app.adminPassword')), // password
+            'password' => config('app.adminPassword'), // password
             'remember_token' => Str::random(10),
             ]);
 
